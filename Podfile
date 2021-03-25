@@ -10,15 +10,13 @@ def test_pods
   pod 'Nimble'
 end
 
-target 'Chaos' do
-  pod 'Firebase'
-  pod 'Kingfisher'
+target 'Contacts' do
   pod 'MagicalRecord/CocoaLumberjack', :git => 'https://github.com/magicalpanda/MagicalRecord'
   pod 'Moya'
   pod 'RxSwift'
   pod 'SnapKit'
   
-  target 'ChaosTests' do
+  target 'ContactsTests' do
     test_pods
   end
 end
