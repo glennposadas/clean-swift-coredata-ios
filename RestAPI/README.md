@@ -1,2 +1,2 @@
-# scoutd-api
-Scoutd's rest-api project.
+# contacts-api
+Clean swift coredata (aka Contacts)'s rest-api project.
