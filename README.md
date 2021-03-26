@@ -4,6 +4,13 @@
 
 ---
 
+**UPDATE** as March 26, 2021, just the same day I started this sample project, I've decided to discontinue this, perhaps for now.
+I realized I'm wasting a bit time trying to do this project and my main full-time project back and forth.
+I haven't learned Clean Swift architecture fully. I've decided to just learn such architecture through my main project.
+Since they're practically the same structure and setup, except the project name.
+
+---
+
 ## Tech Stacks
 
 

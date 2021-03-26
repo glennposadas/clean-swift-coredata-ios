@@ -33,9 +33,7 @@ final class ContactListController: BaseController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    Delay.delay(2) {
-      self.navigationController?.pushViewController(ContactViewerController(), animated: true)
-    }
+
   }
   
   // MARK: Setup

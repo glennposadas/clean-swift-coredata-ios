@@ -10,6 +10,11 @@ import UIKit
 
 typealias ViewControllerWillAppearInjectBlock = ((_ viewController: BaseController, _ animated: Bool) -> Void)
 
+protocol ViewConfigurable where Self: UIView {
+    func setupView()
+    func setupLayout()
+}
+
 /**
  The base controller that implements `FBFullscreenPopGesture` features.
  */
