@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     (UIApplication.shared.delegate as? AppDelegate)?.self.window = window
     
-    window?.rootViewController = ViewController()
+    window?.rootViewController = ContactListController()
     window?.makeKeyAndVisible()
   }
   
