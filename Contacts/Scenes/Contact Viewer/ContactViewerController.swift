@@ -12,7 +12,7 @@ protocol ContactViewerDisplayLogic: class {
 
 }
 
-final class ContactViewerController: UIViewController {
+final class ContactViewerController: BaseController {
 
   var interactor: ContactViewerBusinessLogic?
   var router: (ContactViewerRoutingLogic & ContactViewerDataPassing)?
@@ -29,6 +29,18 @@ final class ContactViewerController: UIViewController {
     setup()
   }
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    navigationController?.setStatusBarAppearance(statusBarShouldBeHidden: true)
+  }
+  
   // MARK: Setup
 
   private func setup() {

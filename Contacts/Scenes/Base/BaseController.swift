@@ -35,8 +35,16 @@ class BaseController: UIViewController {
   // MARK: - Overrides
   // MARK: Functions
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    view.backgroundColor = .white
+  }
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    
+    setStatusBarAppearance(statusBarShouldBeHidden: false)
     
     if let willAppearInjectBlock = self.willAppearInjectBlock {
       willAppearInjectBlock(self, animated)

@@ -42,6 +42,9 @@
 		45CCFF45260E0062004A11F7 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCFF42260E0062004A11F7 /* BaseNavigationController.swift */; };
 		45CCFF46260E0062004A11F7 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCFF43260E0062004A11F7 /* BaseController.swift */; };
 		45CCFF47260E0062004A11F7 /* FullscreenPopGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCFF44260E0062004A11F7 /* FullscreenPopGestureRecognizerDelegate.swift */; };
+		45CCFF52260E038A004A11F7 /* UIViewController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCFF51260E038A004A11F7 /* UIViewController+StatusBar.swift */; };
+		45CCFF57260E03E3004A11F7 /* StatusBarToggleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCFF56260E03E3004A11F7 /* StatusBarToggleable.swift */; };
+		45CCFF77260E05FA004A11F7 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCFF76260E05FA004A11F7 /* Delay.swift */; };
 		B5FD3D634C8C19CE16C00B32 /* Pods_ContactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF2EC69446B3AA38814A33 /* Pods_ContactsTests.framework */; };
 		F91CB5B6A5ADD18D4A1ABD6B /* Pods_Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124623B5C0CECED4236E366D /* Pods_Contacts.framework */; };
 /* End PBXBuildFile section */
@@ -158,6 +161,9 @@
 		45CCFF42260E0062004A11F7 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		45CCFF43260E0062004A11F7 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		45CCFF44260E0062004A11F7 /* FullscreenPopGestureRecognizerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenPopGestureRecognizerDelegate.swift; sourceTree = "<group>"; };
+		45CCFF51260E038A004A11F7 /* UIViewController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StatusBar.swift"; sourceTree = "<group>"; };
+		45CCFF56260E03E3004A11F7 /* StatusBarToggleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarToggleable.swift; sourceTree = "<group>"; };
+		45CCFF76260E05FA004A11F7 /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		8357C600CC18AB9C8BCA0325 /* Pods-Contacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.debug.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8CDD7E6DE79D12C84B3C9F35 /* Pods-Contacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.release.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +245,7 @@
 				4577C71E260D7995005AC95E /* UIViewController+Alert.swift */,
 				4577C723260D79DA005AC95E /* UIViewController+Current.swift */,
 				45CCFE54260D7E16004A11F7 /* Bundle+Versions.swift */,
+				45CCFF51260E038A004A11F7 /* UIViewController+StatusBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,8 +308,9 @@
 			isa = PBXGroup;
 			children = (
 				4577C703260D0737005AC95E /* Extensions */,
-				4577C6D7260D056B005AC95E /* ProgressHUD.swift */,
 				4577C6FB260D05F4005AC95E /* ChaosENVManager.swift */,
+				45CCFF76260E05FA004A11F7 /* Delay.swift */,
+				4577C6D7260D056B005AC95E /* ProgressHUD.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -637,6 +645,7 @@
 				45CCFF42260E0062004A11F7 /* BaseNavigationController.swift */,
 				45CCFF43260E0062004A11F7 /* BaseController.swift */,
 				45CCFF44260E0062004A11F7 /* FullscreenPopGestureRecognizerDelegate.swift */,
+				45CCFF56260E03E3004A11F7 /* StatusBarToggleable.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -883,6 +892,7 @@
 				4577C705260D074B005AC95E /* UIColor+Hex.swift in Sources */,
 				45CCFF1E260DF19D004A11F7 /* ContactViewerController.swift in Sources */,
 				455FC0E6260CBBB2001406B1 /* Chaos.xcdatamodeld in Sources */,
+				45CCFF57260E03E3004A11F7 /* StatusBarToggleable.swift in Sources */,
 				45CCFF03260DF143004A11F7 /* ContactListInteractor.swift in Sources */,
 				4577C71F260D7995005AC95E /* UIViewController+Alert.swift in Sources */,
 				4577C74B260D7AE9005AC95E /* CoreService.swift in Sources */,
@@ -900,9 +910,11 @@
 				45CCFF1B260DF19D004A11F7 /* ContactViewerPresenter.swift in Sources */,
 				455FC0DE260CBBB2001406B1 /* SceneDelegate.swift in Sources */,
 				4577C743260D7AB6005AC95E /* Reachability.swift in Sources */,
+				45CCFF52260E038A004A11F7 /* UIViewController+StatusBar.swift in Sources */,
 				45CCFF45260E0062004A11F7 /* BaseNavigationController.swift in Sources */,
 				4577C729260D7A22005AC95E /* AppDefaults.swift in Sources */,
 				4577C72E260D7A5B005AC95E /* AppSharedData.swift in Sources */,
+				45CCFF77260E05FA004A11F7 /* Delay.swift in Sources */,
 				45CCFF47260E0062004A11F7 /* FullscreenPopGestureRecognizerDelegate.swift in Sources */,
 				4577C715260D78EB005AC95E /* UIView+Shimmer.swift in Sources */,
 				45CCFF06260DF143004A11F7 /* ContactListRouter.swift in Sources */,

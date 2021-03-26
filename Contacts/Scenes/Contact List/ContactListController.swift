@@ -12,7 +12,7 @@ protocol ContactListDisplayLogic: class {
   
 }
 
-final class ContactListController: UIViewController {
+final class ContactListController: BaseController {
 
   var interactor: ContactListBusinessLogic?
   var router: (ContactListRoutingLogic & ContactListDataPassing)?
@@ -30,6 +30,14 @@ final class ContactListController: UIViewController {
     setup()
   }
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    Delay.delay(2) {
+      self.navigationController?.pushViewController(ContactViewerController(), animated: true)
+    }
+  }
+  
   // MARK: Setup
 
   private func setup() {

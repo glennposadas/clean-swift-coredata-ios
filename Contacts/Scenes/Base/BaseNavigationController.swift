@@ -10,8 +10,13 @@ import UIKit
 
 /**
  A subclass of `UINavigationController` that implements `FDFullscreenPopGesture`.
+ This base navigationController class also conforms to `StatusBarToggelable` protocol.
+ We can set the statusBar states (ie visibility, and animation style) by using navCon init method.
+ We can also set it by using the extension method `setStatusBarAppearance` of `UIViewController`.
+ The reason why we put everything in the navCon subclass is that ideally and most of the time, we embed the controller
+ in a navCon even if our controller has no navBar. This means if we have a standalone modal, we could embed it in a navController to use this `StatusBarToggleable`.
  */
-class BaseNavigationController: UINavigationController {
+class BaseNavigationController: UINavigationController, StatusBarToggleable {
   
   // MARK: - Properties
   
@@ -34,8 +39,33 @@ class BaseNavigationController: UINavigationController {
   /// Default to YES, disable it if you don't want so.
   var viewControllerBasedNavigationBarAppearanceEnabled: Bool = true
   
+  // MARK: - StatusBar | StatusBarToggleable
+  
+  var statusBarShouldBeHidden: Bool = false
+  var statusBarAnimationStyle: UIStatusBarAnimation = .slide
+  
+  
+  override var prefersStatusBarHidden: Bool { statusBarShouldBeHidden }
+  override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation { statusBarAnimationStyle }
+  
   // MARK: - Overrides
   // MARK: Functions
+  
+  convenience init(
+      rootViewController: UIViewController,
+      statusBarShouldBeHidden: Bool = false,
+      statusBarAnimationStyle: UIStatusBarAnimation = .slide) {
+      
+      self.init(rootViewController: rootViewController)
+      self.statusBarShouldBeHidden = statusBarShouldBeHidden
+      self.statusBarAnimationStyle = statusBarAnimationStyle
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      
+      updateStatusBarAppearance(completion: nil)
+  }
   
   override func pushViewController(_ viewController: UIViewController, animated: Bool) {
     super.pushViewController(viewController, animated: animated)

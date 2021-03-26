@@ -22,7 +22,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     (UIApplication.shared.delegate as? AppDelegate)?.self.window = window
     
-    window?.rootViewController = ContactListController()
+    window?.rootViewController = BaseNavigationController(
+      rootViewController: ContactListController(),
+      statusBarShouldBeHidden: false,
+      statusBarAnimationStyle: .slide
+    )
     window?.makeKeyAndVisible()
   }
   
