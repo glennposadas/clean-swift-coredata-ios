@@ -11,6 +11,7 @@ def test_pods
 end
 
 target 'Contacts' do
+  pod 'Kingfisher'
   pod 'MagicalRecord/CocoaLumberjack', :git => 'https://github.com/magicalpanda/MagicalRecord'
   pod 'Moya'
   pod 'RxSwift'
