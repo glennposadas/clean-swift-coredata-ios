@@ -4,6 +4,8 @@
 
 ---
 
+**UPDATE** as of April 3, 2021, I have a new similar prototype project: https://github.com/glennposadas/contacts-cleanswiftvip-sqlite-ios
+
 **UPDATE** as March 26, 2021, just the same day I started this sample project, I've decided to discontinue this, perhaps for now.
 I realized I'm wasting a bit time trying to do this project and my main full-time project back and forth.
 I haven't learned Clean Swift architecture fully. I've decided to just learn such architecture through my main project.
